@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Advanced To-Do List</h1>
+    <div id="task-input">
+      <input type="text" id="task-name" placeholder="Enter a task" />
+      <select id="task-category">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Others">Others</option>
+      </select>
+      <button id="add-task">Add Task</button>
+    </div>
+    <div id="filters">
+      <label>Filter by Category:</label>
+      <select id="category-filter">
+        <option value="All">All</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+    <ul id="task-list" class="sortable"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

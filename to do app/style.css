@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: linear-gradient(to right, #f4f4f4, #e2e2e2);
+    transition: background-color 0.3s ease;
+}
+
+#app {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#app:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}
+
+#task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#task-input input,
+#task-input select,
+#task-input button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#task-input input:focus,
+#task-input select:focus,
+#task-input button:focus {
+    border-color: #007BFF;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    cursor: grab;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.task-item:hover {
+    background: #e6e6e6;
+    transform: scale(1.02);
+}
+
+.task-item button {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.task-item button:hover {
+    background: darkred;
+}
+
+@media (max-width: 600px) {
+    #app {
+        padding: 10px;
+    }
+
+    #task-input {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #task-input input,
+    #task-input select,
+    #task-input button {
+        width: 100%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-item button {
+        align-self: flex-end;
+    }
+}
